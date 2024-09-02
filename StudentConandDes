@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+class Student{
+	private:
+		string name;
+		int marks;
+		string dept;
+	public:
+		Student(const string& studentname,int studentmarks,const string& dept)
+		  :name(studentname),marks(studentmarks),dept(dept){
+		  	cout<<"student object created:\n";
+		  }
+		  ~Student(){
+		  	cout<<"The student object destroyed:"<<name<<" "<<marks<<dept;
+		  }
+		  void read(){
+		  	cout<<"Enter the student details:\n";
+		  	cout<<"Enter name:\n";
+		  	cin>>name;
+		  	cout<<"Enter marks:\n";
+		  	cin>>marks;
+		  	cout<<"Enter department:\n";
+		  	cin>>dept;
+		  }
+		  void display(){
+		  	cout<<"Name:"<<name<<"\n";
+		  	cout<<"Marks:"<<marks<<"\n";
+		  	cout<<"Department: "<<dept<<"\n";
+		  }
+};
+int main(){
+	Student s(" ",0," ");
+	s.read();
+	s.display();
+}
