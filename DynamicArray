@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int *arr;
+	int num,i;
+	cout<<"Enter the size:";
+	cin>>num;
+	arr=new int[num];
+	cout<<"Enter elements:\n";
+	for(i=0;i<num;i++){
+		cin>>arr[i];
+	}
+	cout<<"Array elements are:";
+	for(i=0;i<num;i++){
+		cout<<arr[i]<<" ";
+	}
+	
+}
