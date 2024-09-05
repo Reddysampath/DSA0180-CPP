@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class shape{
+	private:
+		int a,b;
+	public:
+		shape(int a){
+			this->a=a;
+		}
+		shape(int a ,int b){
+			this->a=a;
+			this->b=b;
+		}
+		void triangle(){
+			float area=0.5*a*b;
+			cout<<"Area of triangle: "<<area<<"\n";
+		}
+		void rectangle(){
+			int area=a*b;
+			cout<<"Area of rectangle: "<<area;
+		}
+};
+int main(){
+	shape d(2,5);
+	shape d1(22,6);
+	d.triangle();
+	d1.rectangle();
+	}
