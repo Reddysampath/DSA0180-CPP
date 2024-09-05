@@ -1,0 +1,52 @@
+#include<iostream>
+using namespace std;
+
+class Animal {
+public:
+    string name;
+    string species;
+    int age;
+
+    Animal() {
+        name = "dog";         
+        species = "hjwqv";    
+        age = 12;
+    }
+};
+
+class Cat : public Animal { 
+public:
+    string color;
+    string breed;
+
+    void print() {
+        color = "white";    
+        breed = "india";    
+        
+        cout << "Cat details: " << color << " " << breed << " " << name << " " << species << " " << age << endl;
+    }
+};
+
+class Dog : public Animal { 
+public:
+    string weight;
+    string breed;
+
+    void print() {
+        weight = "20";      
+        breed = "solo";     
+      
+        cout << "Dog details: " << name << " " << species << " " << age << " " << weight << " " << breed << endl;
+    }
+};
+
+int main() {
+    Animal a;
+    Cat c;
+    Dog d;
+
+    c.print();
+    d.print();
+
+    return 0;
+}
