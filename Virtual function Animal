@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+class Animal{
+	public:
+		virtual void eat(){
+			cout<<"Animal type:"<<"\n";
+		}	
+};
+class Herbivore:public Animal{
+	public:
+		char* herb[3];
+		Herbivore(){
+			herb[0]="Deer";
+			herb[1]="cow";
+			herb[2]="Elephant";
+		}
+		 void eat(){
+			cout<<"The herbivore animals are:"<<"\n";
+			for(int i=0;i<3;i++){
+				cout<<"-"<<herb[i]<<"\n";
+			}
+		}
+};
+class Carnivore:public Animal{
+	public:
+		char* carn[3];
+		Carnivore(){
+			carn[0]="Tiger";
+			carn[1]="Lion";
+			carn[2]="Fox";
+		}
+		void eat(){
+			cout<<"The Carnivore Animals are: "<<"\n";
+			for(int i=0;i<3;i++){
+				cout<<"-"<<carn[i]<<"\n";
+			}
+		}
+};
+int main(){
+	Herbivore h;
+	Carnivore c;
+	
+	Animal* A1=&h;
+	Animal* A2=&c;
+	
+	A1->eat();
+	A2->eat();
+}
