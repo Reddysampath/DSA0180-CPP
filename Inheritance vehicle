@@ -1,0 +1,70 @@
+#include<iostream>
+using namespace std;
+
+class vehicle {
+    public:
+    string make;
+    string model;
+    int year;
+
+    void read() {
+        cout << "Enter make, model, and year:" << "\n";
+        cin >> make >> model >> year;
+    }
+};
+
+class car : public vehicle {
+    public:
+    int capacity;
+    string fuel;
+
+    void read() {
+        vehicle::read();  
+        cout << "Enter capacity:\n";
+        cin >> capacity;
+        cout << "Enter fuel type:\n";
+        cin >> fuel;
+    }
+
+    void display() {
+        cout << "Capacity: " << capacity << "\n";
+        cout << "Vehicle model: " << model << "\n";
+        cout << "Vehicle make: " << make << "\n";
+        cout << "Vehicle year: " << year << "\n";
+        cout << "Fuel type: " << fuel << "\n";
+    }
+};
+
+class Truck : public vehicle {
+    public:
+    int payload_capacity;
+    int towing_capacity;
+
+    void read() {
+        vehicle::read(); 
+        cout << "Enter payload capacity:\n";
+        cin >> payload_capacity;
+        cout << "Enter towing capacity:\n";
+        cin >> towing_capacity;
+    }
+
+    void display() {
+        cout << "Payload capacity: " << payload_capacity << "\n";
+        cout << "Vehicle model: " << model << "\n";
+        cout << "Vehicle make: " << make << "\n";
+        cout << "Vehicle year: " << year << "\n";
+        cout << "Towing capacity: " << towing_capacity << "\n";
+    }
+};
+
+int main() {
+    car c;
+    c.read();
+    c.display();
+
+    Truck t;
+    t.read();
+    t.display();
+
+    return 0;
+}
