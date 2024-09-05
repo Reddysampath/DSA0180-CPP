@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+class Shape{
+	public:
+		virtual void area(){
+			cout<<"Area is: ";
+		}
+		virtual void volume(){
+			cout<<"Volume is:";
+		}
+};
+class Sphere:public Shape{
+	public:
+		int r;
+		
+		void area(){
+			double ar=4*3.14*r*r;
+			cout<<"Area of sphere is:"<<ar<<"\n";
+		}
+		void volume(){
+			double vo=(4.0/3.0)*3.14*r*r*r;
+			cout<<"volume of sphere is:"<<vo<<"\n";
+		}
+};
+class Cylinder:public Shape{
+	public:
+		int r,h;
+		
+		void area(){
+			double ar=(2*3.14*r*h)+2*3.14*r*r;
+			cout<<"Area of cylinder:"<<ar<<"\n";
+		}
+		void volume(){
+			double vo=3.14*r*r*h;
+			cout<<"Volume of cylinder: "<<vo<<"\n";
+		}
+		
+};
+int main(){
+	Sphere s;
+	Cylinder c;
+	s.r=5;
+	c.r=4;
+	c.h=6;
+	Shape* s1=&s;
+	Shape* s2=&c;
+	s1->area();
+	s1->volume();
+	s2->area();
+	s2->volume();
+}
