@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+class space{
+	int x;
+	public:
+		void getdata();
+		void disp();
+		void operator++();
+		};
+		void space::getdata(){
+			cin>>x;
+		}
+		void space::disp(){
+			cout<<x;
+		}
+		void space::operator++(){
+			x=++x;
+		}
+
+int main(){
+	space s;
+	s.getdata();
+	++s;
+	s.disp();
+
+}
