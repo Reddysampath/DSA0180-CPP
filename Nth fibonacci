@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class prac{
+	public:
+		int n1=0,n2=1,n3,n;
+		void read(){
+			cout<<"Enter the number:";
+			cin>>n;
+			cout<<n1<<"\n"<<n2<<"\n";
+		}
+		int display(){
+			if (n == 0) return n1;
+        if (n == 1) return n2;
+        
+			for(int i=3;i<=n;i++){
+				n3=n1+n2;
+		   cout<<n3<<"\n";
+		    n1=n2;
+		    n2=n3;
+			}
+		   return n3;  
+		     
+		}
+};
+int main(){
+	prac p;
+	p.read();
+	int nth=p.display();
+	cout<<p.n<<"The fiboncci series is:\n"<<nth;
+}
