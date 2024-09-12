@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+class Number {
+    private:
+    	int x;
+    public:
+    	void getdata();
+    	void operator+(Number n);
+    	void display();
+};
+void Number::getdata(){
+
+	cin>>x;
+}
+void Number::display(){
+	cout<<x;
+}
+void Number::operator+(Number n){
+	int b=n.x+x;
+	cout<<b;
+}
+int main(){
+	Number a;
+	a.getdata();
+	Number a1;
+	a1.getdata();
+	a+a1;
+}
