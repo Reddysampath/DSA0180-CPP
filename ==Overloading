@@ -1,0 +1,25 @@
+ 
+#include<iostream> 
+using namespace std; 
+
+class Number{ 
+private: 
+	int cost; 
+	public: 
+		Number( int c){ 
+			cost=c; 
+		} 
+		bool operator == ( Number &c){ 
+			if ( cost == c.cost) 
+				return true; 
+			return false; 
+		} 
+}; 
+int main(){ 
+	Number c1(50000); 
+	Number c2 (50000); 
+	if (c1 == c2) 
+		cout<<"Equal"<<endl; 
+	else
+		cout<<"Not Equal"<<endl; 
+}
